@@ -1,5 +1,5 @@
 {
-    "name": "backend-aerea",
+    "name": "backend-aereo-array",
     "version": "1.0.0",
     "description": "Servidor backend de compañia aerea",
     "main": "index.js",

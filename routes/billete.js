@@ -44,12 +44,19 @@ app.get('/', (req, res, next) => {
 app.post('/', (req, res) => {
 
     var parametros = req.body;
+    var time = new Date().toLocaleString();
+    var fecha = new Date().toLocaleDateString();
+    var hora = new Date().toLocaleTimeString();
+
 
     var billete = new Billete({
         vuelo: parametros.vuelo,
-        cliente: parametros.cliente
+        cliente: parametros.cliente,
+        fechaTotal: time,
+        creadoFecha: fecha,
+        creadoHora: hora
     });
-
+    // console.log(fechaCreate);
     billete.save((err, nuevoBillete) => {
 
         if (err) {
